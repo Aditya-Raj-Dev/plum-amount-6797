@@ -1,8 +1,9 @@
-import { Flex, Select,Input, Button } from '@chakra-ui/react'
+import { Flex, Select,Input, Button,Box } from '@chakra-ui/react'
 import React from 'react'
 import beautlogo from "../images/beautylogo.jpg"
 import { BsSearch,BsSuitHeartFill} from 'react-icons/bs';
 import { FaUserAlt} from 'react-icons/fa';
+import { GiShoppingBag} from 'react-icons/gi';
 import styles from "../styles/home.module.css"
 
 const Navbar = () => {
@@ -55,8 +56,8 @@ const Navbar = () => {
       </Flex>
          
          <div className={styles.pagenav}>
-            <Flex justifyContent="space-around">
-                 <Flex>
+            <Flex justifyContent="space-around" height="100%">
+                 <Flex marginBottom="0.2rem" marginTop="0.2rem">
                     <Select  required>
                         <option value="" selected disabled hidden>MAKEUP</option>
                         <option > Face</option>
@@ -64,7 +65,7 @@ const Navbar = () => {
                         <option >Foundation</option>
                         <option >Blush</option>
                       </Select>
-                      <Select required>
+                      <Select  required>
                         <option value="" selected disabled hidden>SKIN</option>
                         <option > Face</option>
                         <option >Makeup</option>
@@ -113,8 +114,7 @@ const Navbar = () => {
                         <option >Blush</option>
                       </Select>
                  </Flex>
-
-                 <Button>MY CART</Button>
+                <Button class={styles.navcartbutton}>{<GiShoppingBag fontSize="22px"/> } MY CART - ₹  {}</Button>
             </Flex>
          </div>
 

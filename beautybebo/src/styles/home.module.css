@@ -11,14 +11,18 @@
 }
 .pagenav{
     background-color: #dd0285;
-
-    padding:10px;
+    height:"100px";
+ 
 }
 .pagenav Select{
     border:0px;
 }
  Select:hover{
    cursor: pointer;
+}
+.pagenav Select {
+  font-weight: bold;
+  width:auto;
 }
 
 
@@ -38,3 +42,15 @@ Select option[value=""] {
 [hidden] {
   display: none;
 }
+.navcartbutton{
+  font-weight: bold;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.1);
+  width: max-content;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+ display: flex;
+ gap:7px;
+ padding-top: 10px;
+}
+
