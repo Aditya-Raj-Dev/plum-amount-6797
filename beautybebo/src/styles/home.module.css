@@ -1,0 +1,40 @@
+.little{
+    height:"80px";
+    width:"80px";
+    border: 1px solid black;
+    padding:10px;
+    margin-right: 10px;
+}
+.toplittle :hover{
+    background-color: #dd0285;
+    color: white;
+}
+.pagenav{
+    background-color: #dd0285;
+
+    padding:10px;
+}
+.pagenav Select{
+    border:0px;
+}
+ Select:hover{
+   cursor: pointer;
+}
+
+
+
+Select,
+Select option {
+  color: #000000;
+}
+
+Select:invalid,
+Select option[value=""] {
+  color: white;
+}
+
+
+/*Added for browser compatibility*/
+[hidden] {
+  display: none;
+}
