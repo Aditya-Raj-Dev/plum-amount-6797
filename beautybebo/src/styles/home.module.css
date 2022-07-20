@@ -53,4 +53,108 @@ Select option[value=""] {
  gap:7px;
  padding-top: 10px;
 }
+.logohome img{
+  height: 35px;
+  display: block;
+  margin-top: auto;
+  margin-left: auto;
+  margin-right: auto;
 
+
+}
+.logohome div{
+ justify-content: center;
+ border: 0.5px solid rgba(242, 235, 235, 0.964);
+  width:140.4px;
+  height: 80px;
+  text-align: left;
+}
+.logohome{
+  width:fit-content
+
+}
+.logohome p{
+  font-size: 14px;
+   
+}
+.container{
+  width: 65%;
+  margin: auto;
+}
+.logohome div :hover{
+  background-color: #e5d5ce;
+  color: white;
+  border-image:white;
+}
+.endproduct>div{
+  width:25%;
+  border: 1px solid rgba(233, 227, 227, 0.964);
+height: 350px;
+}
+.endproduct{
+  display: flex;
+  margin-bottom: 2rem;
+}
+.sidemenu img{
+height: 16px;
+}
+.sidemenu h1{
+  font-size: 12px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.endproduct img{
+height: 200px;
+}
+.endproduct p{
+  color: grey;
+  font-size: 12px;
+}
+.endproduct>div>div{
+  display: flex;
+justify-content: center;
+gap:0.5rem
+
+}
+.endproduct>div>div>h4{
+  color: rgb(10, 229, 10);
+  font-weight: bold;
+}
+.endproduct>div Button{
+  background-color: #dd0285;
+  color: white;
+margin-top: 1rem;
+
+}
+.seller img{
+  height: 120px;
+}
+.seller p{
+  color: grey;
+  font-size: 12px;
+ 
+}
+
+.seller Button{
+  background-color: #dd0285;
+  color: white;
+margin-top: 1rem;
+height:25px;
+  font-size: small;
+  width: fit-content;
+}
+.seller{
+  margin-bottom: 1rem;
+  border: 1px solid rgba(233, 227, 227, 0.964);
+  height: 150px;
+  padding-top: 15px;
+  padding-right: 18px;
+}
+.bestsell h1{
+  text-align: left;
+  
+}
+.sidemenu>div:hover{
+background-color: rgb(201, 199, 195);
+cursor: pointer;
+}

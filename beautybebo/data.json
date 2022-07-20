@@ -475,6 +475,75 @@
             "price":391,
             "cost":449,
             "off":"13% off"
+        }
+    ],
+    "bestseller":[
+        {
+            "id":"bs1`",
+            "name":"Ponds Super Light Gel ",
+            "img":"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/p/o/ponds_super_light_gel_oil_free_moisturiser_with_hyaluronic_acid_vitamin_e2.jpg",
+            "cost":299,
+            "off":"13% off"
         },
+        {
+            "id":"bs2`",
+            "name":"Blue Heven Candy Mattle Lip Color",
+            "img":"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/c/l/cl-08_strawberry_love-min_2.png",
+            "cost":499,
+            "off":"13% off"
+        } ,
+        {
+            "id":"bs3`",
+            "name":"Ponds Pimple CLear Face Wash Pack Of 2",
+            "img":"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/d/s/dsfsdafsdfsd.jpg",
+            "cost":498,
+            "off":"13% off"
+        }
+    ],
+    "latestproduct":[
+        {
+            "id":"lp1",
+            "name":"Mamaearth Rice Face Scrub For Glowing Skin",
+            "img":"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/4/c/4ca14ce8906087779124_7_.jpg",
+            "cost":304,
+            "off":"13% off"
+        },
+        {
+            "id":"lp2`",
+            "name":"Dove Intense Repair Shampoo 650ml",
+            "img":"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/r/e/repair_shampoo_650-2_1_1.jpg",
+            "cost":350,
+            "off":"13% off"
+        } ,
+        {
+            "id":"lp3`",
+            "name":"Organic Harvest Cleansing Milk With Essential Oils",
+            "img":"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/8/9/8908003416557_1.png",
+            "cost":491,
+            "off":"13% off"
+        }
+    ],
+    "mostviewed":[
+        {
+            "id":"mv1",
+            "name":"O3+ Whitening Facial Kit With Brightness",
+            "img":"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/o/5/o5_1_1.jpg",
+            "cost":699,
+            "off":"2% off"
+        },
+        {
+            "id":"mv2`",
+            "name":"Ponds White Beauty Anti Spot Fairness Day Cream Spf 15 Pa++",
+            "img":"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/x/z/xzxzxzxzxz.jpeg",
+            "cost":240,
+            "off":"1% off"
+        } ,
+        {
+            "id":"mv3`",
+            "name":"Vaseline Body Lotion 400ml ",
+            "img":"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/g/v/gvhjgvyjhv.jpg",
+            "cost":310,
+            "off":"13% off"
+        }
     ]
 }
