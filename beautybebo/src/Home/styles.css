@@ -1,0 +1,56 @@
+#app { height: 100% }
+html,
+body {
+  background-color: white;
+  height: 100%;
+}
+
+body {
+  background: #eee;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #000;
+  margin: 0;
+  padding: 0;
+ 
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+.swiper img{
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 14px;
+  background: #fff;
+  border: 1px solid rgba(233, 227, 227, 0.964);
+}
+
+.swiper-slide div{
+  display: flex;
+  justify-content: center;
+  gap:6px;
+  margin-top: 5px;
+  
+}
+.swiper-slide div h4{
+font-weight: bold;
+color: rgb(9, 129, 9);
+} 
+
+.swiper-slide img {
+  height: 220px;
+  padding-left: 30px;
+}
+.swiper-slide  Button{
+  background-color: #dd0285;
+  color: white;
+height:25px;
+  font-size: small;
+  width: fit-content;
+}
