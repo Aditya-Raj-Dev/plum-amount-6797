@@ -1,0 +1,56 @@
+.little{
+    height:"80px";
+    width:"80px";
+    border: 1px solid black;
+    padding:10px;
+    margin-right: 10px;
+}
+.toplittle :hover{
+    background-color: #dd0285;
+    color: white;
+}
+.pagenav{
+    background-color: #dd0285;
+    height:"100px";
+ 
+}
+.pagenav Select{
+    border:0px;
+}
+ Select:hover{
+   cursor: pointer;
+}
+.pagenav Select {
+  font-weight: bold;
+  width:auto;
+}
+
+
+
+Select,
+Select option {
+  color: #000000;
+}
+
+Select:invalid,
+Select option[value=""] {
+  color: white;
+}
+
+
+/*Added for browser compatibility*/
+[hidden] {
+  display: none;
+}
+.navcartbutton{
+  font-weight: bold;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.1);
+  width: max-content;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+ display: flex;
+ gap:7px;
+ padding-top: 10px;
+}
+
