@@ -1,6 +1,6 @@
 import React from 'react'
 import Allcateories from './Allcateories'
-import Newarrival from './Homeproduct'
+import Newarrival from './Newarrival'
 import Navbar from './Navbar'
 import Slideshow from './Sliding'
 import Sliding from './Sliding'

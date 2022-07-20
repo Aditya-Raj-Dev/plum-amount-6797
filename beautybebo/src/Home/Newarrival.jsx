@@ -17,7 +17,7 @@ const Newarrival = () => {
   return (
     <div>
         <div>
-            <img src="https://www.beautybebo.com/pub/media/blue_heaven.jpg" style={{width:"80%",margin:"auto"}} />
+            <img src="https://www.beautybebo.com/pub/media/blue_heaven.jpg"  />
         </div>
        
 

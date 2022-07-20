@@ -8,6 +8,8 @@ export default function Appcontextprovider({children}){
  const [bestseller,setBestseller]= useState([])
  const [latestproduct,setlatestproduct]=useState([])
  const [mostviewed,setmostviewed]= useState([]) 
+ const [prod,setprod]=useState([])
+ const [skin,setskin]=useState([])
 
       function getdata(){
         axios.get(` http://localhost:8080/makeup`)
@@ -29,6 +31,15 @@ export default function Appcontextprovider({children}){
         .then((res)=>{
            setmostviewed(res.data)
         })
+        axios.get(` http://localhost:8080/prod`)
+        .then((res)=>{
+           setprod(res.data)
+        })
+        axios.get(` http://localhost:8080/skin`)
+        .then((res)=>{
+           setskin(res.data)
+        })
+        
         
       }
 
@@ -37,7 +48,7 @@ export default function Appcontextprovider({children}){
       },[])
      
     return (
-        <Appcontext.Provider value={{makeupdata,bestseller,latestproduct,mostviewed}}>
+        <Appcontext.Provider value={{makeupdata,bestseller,latestproduct,mostviewed,prod}}>
             {children}
         </Appcontext.Provider>
     )

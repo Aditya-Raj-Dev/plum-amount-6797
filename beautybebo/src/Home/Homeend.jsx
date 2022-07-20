@@ -7,7 +7,7 @@ import { GiBeachBag} from 'react-icons/gi';
 import { Appcontext } from '../context/Appcontext'
 
 const Homeend = () => {
-    const {makeupdata,bestseller,latestproduct,mostviewed}= useContext(Appcontext)
+    const {makeupdata,bestseller,latestproduct,mostviewed,prod}= useContext(Appcontext)
 
     console.log(makeupdata)
     console.log(bestseller)
@@ -64,51 +64,22 @@ const Homeend = () => {
                         </Grid>
                 </div>
         </Flex>
-        <Box className={styles.endproduct}>
-             <div>
-                <img src="https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/2/7/277cf77missc00000081_1.jpg" alt="" />
-                <p>L'Oreal Paris Infallible Full Wear Concealer</p>
-                 <h5>⭐⭐⭐⭐⭐</h5>
-                 <div >
-                    <s>₹350.00</s>
-                    <h3>₹322.00</h3>
-                    <h4 >8% off</h4>
-                 </div>
-                 <Button>{<GiBeachBag/>} {  } Add to cart</Button>
-
-             </div>
-             <div>
-                <img src="https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/5/b/5b990e16902395773146_3.jpg" alt="" />
-                <p>Maybelline New York Fit Me Primer - Dewy+Smooth</p>
-                 <h5>⭐⭐⭐⭐⭐</h5>
-                 <div >
-                    <s>₹549.00</s>
-                    <h3>₹521.00</h3>
-                    <h4 >9% off</h4>
-                 </div>
-                 <Button>{<GiBeachBag/>} {  } Add to cart</Button>
-             </div>
-             <div>
-                <img src="https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/6/9/6902395735908_0.jpg" alt="" />
-                <p>L'Oreal Paris Infallible Full Wear Concealer</p>
-                 <h5>⭐⭐⭐⭐⭐</h5>
-                 <div >
-                    <s>₹799.00</s>
-                    <h3>₹735.00</h3>
-                    <h4 >8% off</h4>
-                 </div>
-                 <Button>{<GiBeachBag/>} {  } Add to cart</Button>
-             </div>
-             <div>
-                <img src="https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/5/1/51c18ra5qzs._sl1500_.jpg" alt="" />
-                <p>Faces Canada Ultmate Pro Matte Play Eyeliner</p>
-                 <h5>⭐⭐⭐⭐⭐</h5>
-                 <div >
-                    <s>₹649.00</s>
-                    <h3>₹604.00</h3>
-                    <h4 >7% off</h4>
-                 </div>
-                 <Button>{<GiBeachBag/>} {  } Add to cart</Button>
+        <Box >
+             <div className={styles.endproduct}>
+               {
+                prod.map((item)=>(
+                    <div>
+                        <img src={item.img} alt="" />
+                        <p>{item.name}</p>
+                        <div >
+                            <s> {item.cost}</s>
+                            <h3>₹ {item.price}</h3>
+                            <h4 >{item.off}</h4>
+                       </div>
+                       <Button>{<GiBeachBag/>} {  } Add to cart</Button>
+                    </div>
+                ))
+               }
              </div>
         </Box>
         <div>
@@ -125,7 +96,7 @@ const Homeend = () => {
                           <div >
                             <p>{item.name}</p>
                             <h5>⭐⭐⭐⭐⭐</h5>
-                            <h3>{item.cost}</h3>
+                            <h3>₹ {item.cost}</h3>
                             <Button>{<GiBeachBag/>} {  } Add to cart</Button>
                           </div>
                         </Flex>
@@ -143,7 +114,7 @@ const Homeend = () => {
                           <div >
                             <p>{item.name}</p>
                             <h5>⭐⭐⭐⭐⭐</h5>
-                            <h3>{item.cost}</h3>
+                            <h3>₹ {item.cost}</h3>
                             <Button>{<GiBeachBag/>} {  } Add to cart</Button>
                           </div>
                         </Flex>
@@ -161,7 +132,7 @@ const Homeend = () => {
                           <div >
                             <p>{item.name}</p>
                             <h5>⭐⭐⭐⭐⭐</h5>
-                            <h3>{item.cost}</h3>
+                            <h3>₹ {item.cost}</h3>
                             <Button>{<GiBeachBag/>} {  } Add to cart</Button>
                           </div>
                         </Flex>

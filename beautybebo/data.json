@@ -545,5 +545,36 @@
             "cost":310,
             "off":"13% off"
         }
+    ],
+    "prod":[
+        {
+            "id":"s9",
+            "name":"Biotique Advanced Organics Tea Tree Treament Oil Essential Oil For",
+            "img":"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/7/b/7ba61598904352001284_1.jpg",
+            "price":504,
+            "cost":560,
+            "off":"10% off"
+        },
+        {
+            "id":"s10",
+            "name":"WOW Skin Science Activated Charcoal Peel Off Face Mask",
+            "img":"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/f/d/fd794d08904304373124.jpg",
+            "price":399
+        },
+        {
+            "id":"s11",
+            "name":"Mamaearth Flowers Of Youth Essence Serum With Hyaluronic",
+            "img":"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/f/l/flowers-of-youth-essence-serum_2_1.jpg",
+            "price":599
+           
+        },
+        {
+            "id":"s12",
+            "name":"WOW Skin Science Raw African Shea Body Butter",
+            "img":"https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/3/e/3eb5e308904311902874_1.jpg",
+            "price":440,
+            "cost":499,
+            "off":"12% off"
+        }
     ]
 }
