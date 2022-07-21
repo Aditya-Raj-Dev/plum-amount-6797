@@ -15,8 +15,12 @@ import {
   MenuOptionGroup,
   MenuDivider,
 } from '@chakra-ui/react'
+import Login from '../Login-signup/Login';
+import { Link } from 'react-router-dom';
+import {useNavigate} from "react-router-dom"
 
 const Navbar = () => {
+ const navigate=useNavigate()
   return (
     <div>
 
@@ -25,7 +29,7 @@ const Navbar = () => {
       </div>
 
      <Flex justifyContent="space-around" marginBottom="2rem">
-           <div name="logo">
+           <div name="logo"  onClick={()=>navigate("/")} style={{hover:"cursor:pointer" }}>
             <img src={beautlogo} alt="gfdvb" style={{height:"60%"}}/>
            </div>
 
@@ -70,8 +74,8 @@ const Navbar = () => {
               </div>
       </MenuButton>
       <MenuList>
-        <MenuItem>Download</MenuItem>
-        <MenuItem onClick={() => alert('Kagebunshin')}>Create a Copy</MenuItem>
+        <MenuItem onClick={()=>navigate("/login")}>Login</MenuItem>
+        <MenuItem onClick={()=>navigate("/signup")}>Signup</MenuItem>
       </MenuList>
     </>
   )}

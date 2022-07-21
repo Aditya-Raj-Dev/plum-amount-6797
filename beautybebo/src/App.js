@@ -6,13 +6,13 @@ import Resister from './Login-signup/Resister';
 import Login from './Login-signup/Login';
 import Loginform from './Login-signup/Loginform';
 import Newcustomer from './Login-signup/Newcustomer';
+import Allroutes from './routes/Allroutes';
 
 function App() {
   return (
     <div className="App">
       <Navbar/>
-  
-   <Login/>
+       <Allroutes/>
     </div>
   );
 }
