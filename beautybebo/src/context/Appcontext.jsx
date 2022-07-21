@@ -10,6 +10,7 @@ export default function Appcontextprovider({children}){
  const [mostviewed,setmostviewed]= useState([]) 
  const [prod,setprod]=useState([])
  const [skin,setskin]=useState([])
+ const [login,setlogin]=useState(false)
 
       function getdata(){
         axios.get(` http://localhost:8080/makeup`)
@@ -48,7 +49,7 @@ export default function Appcontextprovider({children}){
       },[])
      
     return (
-        <Appcontext.Provider value={{makeupdata,bestseller,latestproduct,mostviewed,prod}}>
+        <Appcontext.Provider value={{makeupdata,bestseller,latestproduct,mostviewed,prod,login}}>
             {children}
         </Appcontext.Provider>
     )

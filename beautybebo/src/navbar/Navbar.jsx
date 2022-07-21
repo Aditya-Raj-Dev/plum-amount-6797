@@ -5,6 +5,16 @@ import { BsSearch,BsSuitHeartFill} from 'react-icons/bs';
 import { FaUserAlt} from 'react-icons/fa';
 import { GiShoppingBag} from 'react-icons/gi';
 import styles from "../styles/home.module.css"
+import {
+  Menu,
+  MenuButton,
+  MenuList,
+  MenuItem,
+  MenuItemOption,
+  MenuGroup,
+  MenuOptionGroup,
+  MenuDivider,
+} from '@chakra-ui/react'
 
 const Navbar = () => {
   return (
@@ -43,11 +53,34 @@ const Navbar = () => {
                   </div>
               </div>
 
-              <div className={styles.toplittle}>
+              {/* <div className={styles.toplittle}>
                   <div className={styles.little}>
                     <FaUserAlt fontSize="20px"/>
                   </div>
+              </div> */}
+
+              <Menu className={styles.loginbutton}>
+  {({ isOpen }) => (
+    <>
+      <MenuButton isActive={isOpen}  className={styles.loginbutton} >
+      <div className={styles.toplittle}>
+                  <div>
+                    <FaUserAlt fontSize="20px"/>
+                  </div>
               </div>
+      </MenuButton>
+      <MenuList>
+        <MenuItem>Download</MenuItem>
+        <MenuItem onClick={() => alert('Kagebunshin')}>Create a Copy</MenuItem>
+      </MenuList>
+    </>
+  )}
+</Menu>
+
+
+
+
+
                <div style={{marginTop: '10px'}}>
                  <h2>My Account</h2>
                </div>
