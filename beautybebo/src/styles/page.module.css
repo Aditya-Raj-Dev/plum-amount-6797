@@ -1,0 +1,50 @@
+.box{
+    border: 1px solid rgb(235, 234, 234);
+    padding: 10px;
+
+}
+.maincontainer{
+    background-color: rgb(244, 241, 241);
+}
+.box p{
+    color:grey;
+    font-size: 14px;
+}
+.box img{
+    height: 200px;
+}
+.container{
+    background-color: white;
+    padding: 10px;
+    width:50%;
+    margin:auto;
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      gap:3px;
+
+}
+.box div{
+    justify-content: center;
+}
+.box h5{
+    margin-bottom: 7px;
+}
+.box h3{
+    font-weight: bolder;
+}
+.box h4{
+    color: green;
+    font-weight: bolder;
+}
+.box Button{
+    background-color: #dd0285;
+    color: white;
+  margin-top: 0.5rem;
+  height:30px;
+    font-size: small;
+    width: fit-content;
+  }
+  .maincontainer Button{
+    background-color: #dd0285;
+    color: white;
+  }

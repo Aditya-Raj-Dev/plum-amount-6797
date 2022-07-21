@@ -7,12 +7,14 @@ import Login from './Login-signup/Login';
 import Loginform from './Login-signup/Loginform';
 import Newcustomer from './Login-signup/Newcustomer';
 import Allroutes from './routes/Allroutes';
+import Makeup from './pages/Makeup';
+import Skin from './pages/Skin';
 
 function App() {
   return (
     <div className="App">
       <Navbar/>
-       <Allroutes/>
+    <Allroutes/>
     </div>
   );
 }

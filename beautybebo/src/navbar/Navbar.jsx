@@ -1,5 +1,5 @@
 import { Flex, Select,Input, Button,Box } from '@chakra-ui/react'
-import React from 'react'
+import React, { useContext } from 'react'
 import beautlogo from "../images/beautylogo.jpg"
 import { BsSearch,BsSuitHeartFill} from 'react-icons/bs';
 import { FaUserAlt} from 'react-icons/fa';
@@ -18,9 +18,12 @@ import {
 import Login from '../Login-signup/Login';
 import { Link } from 'react-router-dom';
 import {useNavigate} from "react-router-dom"
+import { Appcontext } from '../context/Appcontext';
 
 const Navbar = () => {
  const navigate=useNavigate()
+ const {login,logindata} =useContext(Appcontext)
+ console.log(login)
   return (
     <div>
 
@@ -86,7 +89,7 @@ const Navbar = () => {
 
 
                <div style={{marginTop: '10px'}}>
-                 <h2>My Account</h2>
+                 <h2>{login?logindata.fname:"My Account"}</h2>
                </div>
            </Flex>
            
@@ -95,6 +98,7 @@ const Navbar = () => {
          <div className={styles.pagenav}>
             <Flex justifyContent="space-around" height="100%">
                  <Flex marginBottom="0.2rem" marginTop="0.2rem">
+                  <div  onClick={()=>navigate("/makeup")}>
                     <Select  required>
                         <option value="" selected disabled hidden>MAKEUP</option>
                         <option > Face</option>
@@ -102,14 +106,18 @@ const Navbar = () => {
                         <option >Foundation</option>
                         <option >Blush</option>
                       </Select>
-                      <Select  required>
+                   </div>
+                      <div onClick={()=>navigate("/skin")}>
+                      <Select  required >
                         <option value="" selected disabled hidden>SKIN</option>
                         <option > Face</option>
                         <option >Makeup</option>
                         <option >Foundation</option>
                         <option >Blush</option>
                       </Select>
+                      </div>
                       <Select required>
+
                         <option value=""selected disabled hidden>HAIR</option>
                         <option > Face</option>
                         <option >Makeup</option>
