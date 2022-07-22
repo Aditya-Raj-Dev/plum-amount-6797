@@ -10,6 +10,7 @@ import { GiButter } from 'react-icons/gi';
 const Cartpage = () => {
   const [remove,setremove]=useState(false)
    const [cartp,setcartp]= useState([])
+    const {c,setc}=useContext(Appcontext)
 
    function getdata(){
     axios.get(` http://localhost:8080/cart`)
@@ -26,10 +27,31 @@ const Cartpage = () => {
       method: 'DELETE',
     })
     setremove(!remove)
+    setc(!c)
+   }
+
+   function updateqty(num,id,name,img,price,qty){
+    qty=Number(qty)
+    console.log(typeof(qty))
+    axios({
+      url:` http://localhost:8080/cart/${id}`,
+      method: 'PUT',
+      data:{
+              id:id,
+               name:name,
+               img:img,
+               price:price,
+               qty:Number(qty+num)
+        
+      }
+    }).then((res)=>{
+      setc(!c)
+    })
+    
    }
    useEffect(()=>{
     getdata()
-   },[remove])
+   },[remove,c])
   
   return (
     <div>
@@ -57,11 +79,13 @@ const Cartpage = () => {
                             <h4 >{item.off}</h4>
                        </div>
                        <Flex gap="0.5rem">
-                       <Button>-</Button>
+                       <Button onClick={()=>updateqty(-1,item.id,item.name,item.img,item.price)}
+                       >-</Button>
                        <Heading as='h5' size='sm' marginTop='0.6rem'>
-                          0
+                        {item.qty}
                         </Heading>
-                       <Button>+</Button>
+                       <Button onClick={()=>updateqty(1,item.id,item.name,item.img,item.price)}
+                       >+</Button>
                        </Flex>
                        <Button onClick={()=>removeitem(item.id)}
                        >{<RiDeleteBinLine/>}REMOVE ITEM</Button>

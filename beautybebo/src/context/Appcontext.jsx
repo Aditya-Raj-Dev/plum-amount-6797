@@ -7,6 +7,7 @@ export default function Appcontextprovider({children}){
    
    const [total,settotal]=useState(0)
   const [c,setc]=useState(false)
+ 
    const [cart,setcart]=useState([])
    const [load,setload]=useState(false)
  const [makeupdata,setMakeupdata]=useState([])
@@ -34,49 +35,71 @@ export default function Appcontextprovider({children}){
  }
 
       function getdata(mpage){
+         
         axios.get(` http://localhost:8080/makeup?_page=${mpage}&_limit=18`)
         .then((res)=>{
+         
            setMakeupdata(res.data)
+        }).catch((err)=>{
+         console.log(err)
         })
 
         axios.get(`http://localhost:8080/bestseller`)
         .then((res)=>{
+         
            setBestseller(res.data)
+        }).catch((err)=>{
+         console.log(err)
         })
 
         axios.get(` http://localhost:8080/latestproduct`)
         .then((res)=>{
+         
            setlatestproduct(res.data)
+        }).catch((err)=>{
+         console.log(err)
         })
 
         axios.get(` http://localhost:8080/mostviewed`)
         .then((res)=>{
+         
            setmostviewed(res.data)
+        }).catch((err)=>{
+         console.log(err)
         })
+
         axios.get(` http://localhost:8080/prod`)
         .then((res)=>{
+       
            setprod(res.data)
+        }).catch((err)=>{
+         console.log(err)
         })
         
-        
+      
       }
 
       function getskindata(spage){
          axios.get(` http://localhost:8080/skin?_page=${spage}&_limit=18`)
          .then((res)=>{
             setskin(res.data)
-         })
+         }).catch((err)=>{
+            console.log(err)
+           })
       }
 
       function changepage(mpage){
+         setmpage(mpage)
           setload(true)
          setTimeout(()=>{
             setload(false)
             getdata(mpage)
+            
          },1000)
       }
 
       function changeskinpage(spage){
+         setspage(spage)
          setload(true)
         setTimeout(()=>{
            setload(false)
@@ -84,13 +107,11 @@ export default function Appcontextprovider({children}){
         },1000)
      }
 
-      useEffect(()=>{
-      getdata()
-      getskindata()
-      },[mpage,spage])
+     
 
 
       function onclickaddcart(id,name,img,price){
+       
          axios({
             url:`http://localhost:8080/cart`,
             method:"POST",
@@ -99,9 +120,18 @@ export default function Appcontextprovider({children}){
                name:name,
                img:img,
                price:price,
+               qty:1,
             }
          })
-         
+         // axios({
+         //          url:`http://localhost:8080/total`,
+         //          method:"POST",
+         //          data:{
+         //             id:Date.now(),
+         //             price:price,
+         //          }
+         //       })
+            
          setc(!c)
       }
 
@@ -116,16 +146,15 @@ export default function Appcontextprovider({children}){
       //    })
       // }
 
-      // useEffect(()=>{
-      //    addintotal(parameter)
-      // },[secondcall])
 
-      function updatecart(){
-         axios.get(` http://localhost:8080/cart`)
-         .then((res)=>{
-            setcart(res.data)
-         })
-      }
+    
+
+
+
+      useEffect(()=>{
+         getdata()
+         getskindata()
+         },[mpage,spage,c])
      
       // function calculatetotal(){
       //   cart.map((item)=>(
@@ -140,35 +169,49 @@ export default function Appcontextprovider({children}){
       //    ))     
 
       // }
+      function updatecart(){
+         axios.get(`http://localhost:8080/cart`)
+         .then((res)=>{
+            const output=res.data.reduce((acc,curr)=>{
+               return acc+curr.price;
+              // return acc
+             },0)
+             settotal(output)
+             
+            setcart(res.data)
+         })
+      }
     
-        function gettotal(){
-         updatecart()
-         const arr=[]
-         cart.map((item)=>(
-            arr.push(item.price)
-         ))
+      //   function gettotal(){
+      //    updatecart()
+      //    const arr=[]
+      //    cart.map((item)=>(
+      //       arr.push(item.price)
+      //    ))
          
-         if(cart.length>0){
-            const output=arr.reduce((acc,curr)=>{
-               acc=acc+curr;
-               return acc
-              },0)
-              settotal(output)
-         }
-     
-        }
+        
+      //       const output=arr.reduce((acc,curr)=>{
+      //           return acc+curr;
+      //          // return acc
+      //         },0)
+      //         console.log("o",output)
+      //         settotal(output)
+            
+      
+      //   console.log("output")
+      //   }
 
         useEffect(()=>{
-         console.log("rotal",total)
-            gettotal()
-         
+            // gettotal()
+            updatecart()
         },[c])
+        
     
    
     return (
         <Appcontext.Provider value={{makeupdata,bestseller,latestproduct,
          fillsignupdata,logindata,setlogindata,changepage,load,mpage,spage,skin,changeskinpage,
-         onclickaddcart,cart,total,c,
+         onclickaddcart,cart,total,c,setc,
        mostviewed,prod,login,setlogin}}>
             {children}
         </Appcontext.Provider>

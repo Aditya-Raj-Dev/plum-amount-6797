@@ -1051,71 +1051,23 @@
       "id": "m1",
       "name": "Miss Claire Eyelash Glue - Clear Tone",
       "img": "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/2/7/277cf77missc00000081_1.jpg",
-      "price": 322
+      "price": 322,
+      "qty": null
     },
     {
       "id": "m2",
       "name": "Maybelline New York Fit Me Primer - Dewy+Smooth",
       "img": "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/5/b/5b990e16902395773146_3.jpg",
-      "price": 521
+      "price": 521,
+      "qty": 1
     },
     {
-      "id": "s2",
-      "name": "Lotus Herbals Whiteglow Vitamin C Radiance Cream",
-      "img": "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/i/m/image1_600x.jpg",
-      "price": 428
-    },
-    {
-      "id": "s9",
-      "name": "Biotique Advanced Organics Tea Tree Treament Oil Essential Oil For",
-      "img": "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/7/b/7ba61598904352001284_1.jpg",
-      "price": 504
-    },
-    {
-      "id": "s8",
-      "name": "WOW Skin Science AM2PM Sunscreen SPF 50 Lotion",
-      "img": "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/8/9/8904311901495_1_1_.jpg",
-      "price": 385
-    },
-    {
-      "id": "s7",
-      "name": "Organic Harvest Masseuscious Damage Control Cleanser With Acai",
-      "img": "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/5/3/53f7f568906080030383_rvn1.jpg",
-      "price": 1420
+      "id": "m3",
+      "name": "L'Oreal Paris Infallible Full Wear Concealer",
+      "img": "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/6/9/6902395735908_0.jpg",
+      "price": 735,
+      "qty": 1
     }
   ],
-  "total": [
-    {
-      "id": 1658487439449,
-      "price": 322
-    },
-    {
-      "id": 1658487440211,
-      "price": 521
-    },
-    {
-      "id": 1658487446314,
-      "price": 428
-    },
-    {
-      "id": 1658487458002,
-      "price": 504
-    },
-    {
-      "id": 1658487458717,
-      "price": 385
-    },
-    {
-      "id": 1658487459182,
-      "price": 1420
-    },
-    {
-      "id": 1658489001604,
-      "price": null
-    },
-    {
-      "id": 1658489001839,
-      "price": null
-    }
-  ]
+  "total": []
 }

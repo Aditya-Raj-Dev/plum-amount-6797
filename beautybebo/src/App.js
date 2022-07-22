@@ -9,6 +9,7 @@ import Newcustomer from './Login-signup/Newcustomer';
 import Allroutes from './routes/Allroutes';
 import Makeup from './pages/Makeup';
 import Skin from './pages/Skin';
+import Shipping from './pages/Shipping';
 
 function App() {
   return (

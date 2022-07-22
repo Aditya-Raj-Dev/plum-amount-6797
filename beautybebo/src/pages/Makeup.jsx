@@ -7,8 +7,8 @@ import Loading from "./Loading"
 import {Link } from "react-router-dom"
 
 const Makeup = () => {
-    const {makeupdata,setMakeupdata,changepage,load,onclickaddcart}=useContext(Appcontext)
-
+    const {makeupdata,mpage,setMakeupdata,changepage,load,onclickaddcart}=useContext(Appcontext)
+      
   return (
     <div className={styles.maincontainer} >
          <Link to="/"><Button marginTop="0.5rem">GO TO HOME</Button></Link>
@@ -16,9 +16,12 @@ const Makeup = () => {
                 
             <h1 style={{fontWeight: "bolder", fontSize: "20px" ,textAlign: "center",marginBottom: "10px"}}>MAKEUP</h1>
             <Flex gap="0.5rem" >
-             <Button onClick={()=>changepage(1)}>1</Button>
-             <Button onClick={()=>changepage(2)}>2</Button>
-             <Button onClick={()=>changepage(3)}>3</Button>
+             <Button disabled={mpage===1}
+             onClick={()=>changepage(1)}>1</Button>
+             <Button disabled={mpage===2}
+             onClick={()=>changepage(2)}>2</Button>
+             <Button disabled={mpage===3}
+             onClick={()=>changepage(3)}>3</Button>
             </Flex>
         </div>
 

@@ -6,7 +6,7 @@ import styles from "../styles/page.module.css"
 import Loading from "./Loading"
 import {Link } from "react-router-dom"
 const Skin = () => {
-    const {skin,setskin,changeskinpage,load,onclickaddcart}=useContext(Appcontext)
+    const {skin,setskin,changeskinpage,load,onclickaddcart,spage}=useContext(Appcontext)
   return (
     <div className={styles.maincontainer} >
       <Link to="/"> <Button marginTop="1rem">GO TO HOME</Button></Link>
@@ -14,9 +14,12 @@ const Skin = () => {
                 
             <h1 style={{fontWeight: "bolder", fontSize: "20px" ,textAlign: "center",marginBottom: "10px"}}>SKIN</h1>
             <Flex gap="0.5rem" >
-             <Button onClick={()=>changeskinpage(1)}>1</Button>
-             <Button onClick={()=>changeskinpage(2)}>2</Button>
-             <Button onClick={()=>changeskinpage(3)}>3</Button>
+             <Button disabled={spage===1}
+             onClick={()=>changeskinpage(1)}>1</Button>
+             <Button disabled={spage===2}
+             onClick={()=>changeskinpage(2)}>2</Button>
+             <Button disabled={spage===3}
+             onClick={()=>changeskinpage(3)}>3</Button>
             </Flex>
         </div>
 
