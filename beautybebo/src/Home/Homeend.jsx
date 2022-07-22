@@ -7,10 +7,9 @@ import { GiBeachBag} from 'react-icons/gi';
 import { Appcontext } from '../context/Appcontext'
 
 const Homeend = () => {
-    const {makeupdata,bestseller,latestproduct,mostviewed,prod}= useContext(Appcontext)
+    const {makeupdata,bestseller,latestproduct,mostviewed,prod,onclickaddcart}= useContext(Appcontext)
 
-    console.log(makeupdata)
-    console.log(bestseller)
+    
   return (
     <div  >
         <Flex justifyContent="space-around" gap="2rem" marginBottom="1rem">
@@ -76,7 +75,8 @@ const Homeend = () => {
                             <h3>₹ {item.price}</h3>
                             <h4 >{item.off}</h4>
                        </div>
-                       <Button>{<GiBeachBag/>} {  } Add to cart</Button>
+                       <Button  onClick={()=>onclickaddcart(item.id,item.name,item.img,item.price)}
+                       >{<GiBeachBag/>} {  } Add to cart</Button>
                     </div>
                 ))
                }
@@ -97,7 +97,8 @@ const Homeend = () => {
                             <p>{item.name}</p>
                             <h5>⭐⭐⭐⭐⭐</h5>
                             <h3>₹ {item.cost}</h3>
-                            <Button>{<GiBeachBag/>} {  } Add to cart</Button>
+                            <Button  onClick={()=>onclickaddcart(item.id,item.name,item.img,item.price)}
+                            >{<GiBeachBag/>} {  } Add to cart</Button>
                           </div>
                         </Flex>
                     </div>
@@ -115,7 +116,8 @@ const Homeend = () => {
                             <p>{item.name}</p>
                             <h5>⭐⭐⭐⭐⭐</h5>
                             <h3>₹ {item.cost}</h3>
-                            <Button>{<GiBeachBag/>} {  } Add to cart</Button>
+                            <Button  onClick={()=>onclickaddcart(item.id,item.name,item.img,item.price)}
+                            >{<GiBeachBag/>} {  } Add to cart</Button>
                           </div>
                         </Flex>
                     </div>
@@ -133,7 +135,8 @@ const Homeend = () => {
                             <p>{item.name}</p>
                             <h5>⭐⭐⭐⭐⭐</h5>
                             <h3>₹ {item.cost}</h3>
-                            <Button>{<GiBeachBag/>} {  } Add to cart</Button>
+                            <Button  onClick={()=>onclickaddcart(item.id,item.name,item.img,item.price)}
+                            >{<GiBeachBag/>} {  } Add to cart</Button>
                           </div>
                         </Flex>
                     </div>

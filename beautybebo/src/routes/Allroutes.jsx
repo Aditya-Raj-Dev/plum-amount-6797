@@ -3,6 +3,7 @@ import { Route,Routes } from 'react-router'
 import Home from '../Home/Home'
 import Login from '../Login-signup/Login'
 import Resister from '../Login-signup/Resister'
+import Cartpage from '../pages/Cartpage'
 import Makeup from '../pages/Makeup'
 import Skin from '../pages/Skin'
 
@@ -15,6 +16,7 @@ const Allroutes = () => {
            <Route path="/login" element={<Login/>}/>
            <Route path="/skin" element={<Skin/>}/>
            <Route path="/makeup" element={<Makeup/>}/>
+           <Route path="/cart" element={<Cartpage />}/>
         </Routes>
         
     </div>

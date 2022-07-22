@@ -4,6 +4,10 @@ import axios from "axios";
 export const Appcontext= createContext()
 
 export default function Appcontextprovider({children}){
+   
+   const [total,settotal]=useState(0)
+  const [c,setc]=useState(false)
+   const [cart,setcart]=useState([])
    const [load,setload]=useState(false)
  const [makeupdata,setMakeupdata]=useState([])
  const [mpage,setmpage]=useState(1)
@@ -29,7 +33,7 @@ export default function Appcontextprovider({children}){
 })
  }
 
-      function getdata(mpage,spage){
+      function getdata(mpage){
         axios.get(` http://localhost:8080/makeup?_page=${mpage}&_limit=18`)
         .then((res)=>{
            setMakeupdata(res.data)
@@ -86,11 +90,86 @@ export default function Appcontextprovider({children}){
       },[mpage,spage])
 
 
+      function onclickaddcart(id,name,img,price){
+         axios({
+            url:`http://localhost:8080/cart`,
+            method:"POST",
+            data:{
+               id:id,
+               name:name,
+               img:img,
+               price:price,
+            }
+         })
+         
+         setc(!c)
+      }
+
+      // function addintotal(p){
+      //    axios({
+      //       url:`http://localhost:8080/total`,
+      //       method:"POST",
+      //       data:{
+      //          id:Date.now(),
+      //          price:p,
+      //       }
+      //    })
+      // }
+
+      // useEffect(()=>{
+      //    addintotal(parameter)
+      // },[secondcall])
+
+      function updatecart(){
+         axios.get(` http://localhost:8080/cart`)
+         .then((res)=>{
+            setcart(res.data)
+         })
+      }
      
+      // function calculatetotal(){
+      //   cart.map((item)=>(
+      //    axios({
+      //          url:`http://localhost:8080/total`,
+      //          method:"POST",
+      //          data:{
+      //            id:Date.now(),
+      //             price:item.price,
+      //          }
+      //       })
+      //    ))     
+
+      // }
+    
+        function gettotal(){
+         updatecart()
+         const arr=[]
+         cart.map((item)=>(
+            arr.push(item.price)
+         ))
+         
+         if(cart.length>0){
+            const output=arr.reduce((acc,curr)=>{
+               acc=acc+curr;
+               return acc
+              },0)
+              settotal(output)
+         }
+     
+        }
+
+        useEffect(()=>{
+         console.log("rotal",total)
+            gettotal()
+         
+        },[c])
+    
+   
     return (
         <Appcontext.Provider value={{makeupdata,bestseller,latestproduct,
          fillsignupdata,logindata,setlogindata,changepage,load,mpage,spage,skin,changeskinpage,
-        mostviewed,prod,login,setlogin}}>
+         onclickaddcart,cart,total,c,
+       mostviewed,prod,login,setlogin}}>
             {children}
         </Appcontext.Provider>
     )

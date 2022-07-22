@@ -20,7 +20,7 @@ import { FreeMode, Pagination } from "swiper";
 
 
 const Newarrival = () => {
-   const {makeupdata}= useContext(Appcontext)
+   const {makeupdata,onclickaddcart}= useContext(Appcontext)
 
   return (
     <div>
@@ -53,7 +53,8 @@ const Newarrival = () => {
                             <h3>₹ {item.price}</h3>
                             <h4 >{item.off}</h4>
                        </div>
-                       <Button>{<GiBeachBag/>} Add to cart</Button>
+                       <Button onClick={()=>onclickaddcart(item.id,item.name,item.img,item.price)}
+                       >{<GiBeachBag/>} Add to cart</Button>
                        </SwiperSlide>
                     </div>
                 ))

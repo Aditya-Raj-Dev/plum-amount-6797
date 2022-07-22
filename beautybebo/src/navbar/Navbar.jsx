@@ -1,5 +1,5 @@
 import { Flex, Select,Input, Button,Box } from '@chakra-ui/react'
-import React, { useContext } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import beautlogo from "../images/beautylogo.jpg"
 import { BsSearch,BsSuitHeartFill} from 'react-icons/bs';
 import { FaUserAlt} from 'react-icons/fa';
@@ -21,9 +21,11 @@ import {useNavigate} from "react-router-dom"
 import { Appcontext } from '../context/Appcontext';
 
 const Navbar = () => {
+  
  const navigate=useNavigate()
- const {login,logindata} =useContext(Appcontext)
- console.log(login)
+ const {login,logindata,total,c} =useContext(Appcontext)
+ const [ftotal,setftotal]=useState(total)
+
   return (
     <div>
 
@@ -159,7 +161,8 @@ const Navbar = () => {
                         <option >Blush</option>
                       </Select>
                  </Flex>
-                <Button class={styles.navcartbutton}>{<GiShoppingBag fontSize="22px"/> } MY CART - ₹  {}</Button>
+                <Button onClick={()=>navigate("/cart")}
+                class={styles.navcartbutton}>{<GiShoppingBag fontSize="22px"/> } MY CART - ₹ {total}</Button>
             </Flex>
          </div>
 

@@ -1,4 +1,4 @@
-.box{
+.tbox{
     border: 1px solid rgb(235, 234, 234);
     padding: 10px;
 
@@ -43,8 +43,70 @@
   height:30px;
     font-size: small;
     width: fit-content;
+    gap:0.5rem
   }
   .maincontainer Button{
     background-color: #dd0285;
     color: white;
   }
+  
+
+
+.cartbox{
+    border: 1px solid rgb(235, 234, 234);
+    padding: 10px;
+
+}
+.cartcontainer{
+    background-color: rgb(244, 241, 241);
+}
+.cartbox p{
+    color:grey;
+    font-size: 14px;
+}
+.cartbox img{
+    height: 200px;
+}
+.cartcontainer{
+    background-color: white;
+    padding: 10px;
+    width:50%;
+    margin:auto;
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      gap:3px;
+
+}
+.cartbox div{
+    justify-content: center;
+}
+.cartbox h5{
+    margin-bottom: 7px;
+}
+.cartbox h3{
+    font-weight: bolder;
+}
+.cartbox h4{
+    color: green;
+    font-weight: bolder;
+}
+.cartbox>Button{
+    background-color: black;
+    color: white;
+  margin-top: 0.5rem;
+  height:30px;
+    font-size: small;
+    width: fit-content;
+    gap:0.5rem
+  }
+  .cartbox div Button{
+    background-color:#f4b108;
+    color: white;
+    margin-top: 0.5rem;
+    height:25px;
+   align-items: center;
+    font-size:larger;
+    width: fit-content;
+    gap:0.5rem
+  }
+  

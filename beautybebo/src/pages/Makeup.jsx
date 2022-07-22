@@ -7,11 +7,11 @@ import Loading from "./Loading"
 import {Link } from "react-router-dom"
 
 const Makeup = () => {
-    const {makeupdata,setMakeupdata,changepage,load}=useContext(Appcontext)
+    const {makeupdata,setMakeupdata,changepage,load,onclickaddcart}=useContext(Appcontext)
 
   return (
     <div className={styles.maincontainer} >
-         <Link to="/"> GO TO HOME</Link>
+         <Link to="/"><Button marginTop="0.5rem">GO TO HOME</Button></Link>
         <div style={{width: '50%', justifyContent:"space-between", margin:"auto",display: "flex",marginBottom:"1rem",marginTop:"1rem"}}>
                 
             <h1 style={{fontWeight: "bolder", fontSize: "20px" ,textAlign: "center",marginBottom: "10px"}}>MAKEUP</h1>
@@ -30,11 +30,12 @@ const Makeup = () => {
                             <p>{item.name}</p>
                             <h5>⭐⭐⭐⭐⭐</h5>
                             <Flex gap="0.5rem">
-                            <s>{item.price}</s>
-                            <h3>₹ {item.cost}</h3>
+                            <s>{item.cost}</s>
+                            <h3>₹ {item.price}</h3>
                             <h4>{item.off}</h4>
                             </Flex>
-                            <Button>{<GiBeachBag/>} {  } Add to cart</Button>
+                            <Button onClick={()=>onclickaddcart(item.id,item.name,item.img,item.price)}
+                            >{<GiBeachBag/>} {  } Add to cart</Button>
                     </div>
                 ))
                 }
