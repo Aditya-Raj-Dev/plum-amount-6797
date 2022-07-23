@@ -1048,26 +1048,25 @@
   ],
   "cart": [
     {
-      "id": "m1",
-      "name": "Miss Claire Eyelash Glue - Clear Tone",
-      "img": "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/2/7/277cf77missc00000081_1.jpg",
-      "price": 322,
-      "qty": null
-    },
-    {
-      "id": "m2",
-      "name": "Maybelline New York Fit Me Primer - Dewy+Smooth",
-      "img": "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/5/b/5b990e16902395773146_3.jpg",
-      "price": 521,
+      "id": "s2",
+      "name": "Lotus Herbals Whiteglow Vitamin C Radiance Cream",
+      "img": "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/i/m/image1_600x.jpg",
+      "price": 428,
       "qty": 1
     },
     {
-      "id": "m3",
-      "name": "L'Oreal Paris Infallible Full Wear Concealer",
-      "img": "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/6/9/6902395735908_0.jpg",
-      "price": 735,
+      "id": "m21",
+      "name": "NYX Professional Makeup Pore Filler",
+      "img": "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/6/1/618a4rcg7il._sl1500_.jpg",
+      "price": 1378,
+      "qty": 1
+    },
+    {
+      "id": "s4",
+      "name": "WOW Skin Science Activated Charcoal Face Scrub",
+      "img": "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/8/9/8904304651284_1.jpg",
+      "price": 375,
       "qty": 1
     }
-  ],
-  "total": []
+  ]
 }

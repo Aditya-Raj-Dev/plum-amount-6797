@@ -10,12 +10,18 @@ import Allroutes from './routes/Allroutes';
 import Makeup from './pages/Makeup';
 import Skin from './pages/Skin';
 import Shipping from './pages/Shipping';
+import Checkout from './pages/Checkout';
+import Footer from './footer/Footer';
+import BasicUsage from "./pages/Modalcart"
 
 function App() {
   return (
     <div className="App">
       <Navbar/>
     <Allroutes/>
+   <Footer/>
+   <BasicUsage/>
+    
     </div>
   );
 }

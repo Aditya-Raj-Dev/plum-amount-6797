@@ -5,6 +5,7 @@
 }
 .maincontainer{
     background-color: rgb(244, 241, 241);
+   
 }
 .box p{
     color:grey;
@@ -13,15 +14,27 @@
 .box img{
     height: 200px;
 }
+.box{
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+     rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
+      rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    border-radius: 12px;
+    padding:15px;
+}
 .container{
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.859);
+
     padding: 10px;
     width:50%;
     margin:auto;
       display: grid;
       grid-template-columns: repeat(3,1fr);
-      gap:3px;
-
+      gap:1.5rem;
+      padding:1.5rem;
+}
+.box p{
+    font-weight: bold;
+    color:black;
 }
 .box div{
     justify-content: center;
@@ -37,6 +50,7 @@
     font-weight: bolder;
 }
 .box Button{
+    
     background-color: #dd0285;
     color: white;
   margin-top: 0.5rem;

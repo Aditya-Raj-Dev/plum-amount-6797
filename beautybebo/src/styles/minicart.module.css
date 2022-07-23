@@ -1,0 +1,16 @@
+.box img{
+    height: 100px;
+}
+.box p{
+    font-size: x-small;
+    color: black;
+    font-weight: bold;
+}
+.removebtn{
+    color: white;
+    background-color: black;
+    
+}
+.box{
+gap:14px;
+}

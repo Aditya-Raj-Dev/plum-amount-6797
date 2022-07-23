@@ -6,9 +6,18 @@ import { textAlign } from '@mui/system'
 import {FaFacebook} from 'react-icons/fa';
 import {FcGoogle} from 'react-icons/fc';
 import { Appcontext } from '../context/Appcontext'
-
+import {useLocation,useNavigate} from "react-router-dom"
+import {
+  Alert,
+  AlertIcon,
+  AlertTitle,
+  AlertDescription,
+  useDisclosure,Box,CloseButton,
+} from '@chakra-ui/react'
 
 const Resister = () => {
+  const {state} =useLocation()
+  const navigate= useNavigate()
 
   const {fillsignupdata,logindata,setlogindata,login,setlogin}=useContext(Appcontext)
 
@@ -17,21 +26,40 @@ function submitsignupform(){
  if(logindata.fname==="" || logindata.lname==="" || logindata.email==="" || logindata.phone===""
   || logindata.pass===""
  ){
-  alert("fPlease Fill The form")
+  alert("Please Fill The form")
  }
  else{
-   setlogin(true)
+  if(state.from){
+  
+    setlogin(true)
+    navigate(state.from,{replace:true})
+  }
+  else{
+    setlogin(true)
+    navigate("/")
+  }
+ 
  }
 }
-console.log(login)
+
   return (
     <div  className={styles.singbox} >
       <h1 style={{fontSize:"18px", fontWeight:"bold",marginBottom:"2rem",marginTop:"0.5rem" ,textAlign:"center"}}>CREATE NEW CUSTOMER ACCOUNT</h1>
       <Flex margin="auto" width="40%" gap="1rem"justifyContent="center">
-      <Button colorScheme='facebook' leftIcon={<FaFacebook />}>
-      Log in with Facebook
+      <Button onClick={()=> {
+        window.location.replace('https://facebook.com');
+        
+        return navigate("/signup");
+      }}
+      colorScheme='facebook' leftIcon={<FaFacebook />}>
+    Log in with Facebook
   </Button>
-  <Button colorScheme='red' leftIcon={<FcGoogle />} >Sign in with Google</Button>
+  <Button onClick={()=> {
+        window.location.replace('https://google.com');
+        
+        return navigate("/signup");
+      }}
+  colorScheme='red' leftIcon={<FcGoogle />} >Sign in with Google</Button>
       </Flex>
       <br />
       <p style={{color:"grey"}}>--OR--</p>

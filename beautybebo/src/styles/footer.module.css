@@ -1,0 +1,26 @@
+.footer{
+    background-color: rgba(0, 0, 0, 0.91);
+    padding: 1rem;
+    margin-top: 3rem;
+    
+}
+.footer h1{
+    color: white;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.footer div{
+    justify-content: space-around;
+}
+.footer hr{
+    border-top: 1px dashed red;
+}
+.footer p{
+    color: rgb(208, 204, 204);
+    margin-bottom: 5px;
+}
+.footer li{
+    color: rgb(208, 204, 204);
+    text-align: left;
+    margin-bottom: 5px;
+}

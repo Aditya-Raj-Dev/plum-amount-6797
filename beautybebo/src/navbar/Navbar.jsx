@@ -19,6 +19,8 @@ import Login from '../Login-signup/Login';
 import { Link } from 'react-router-dom';
 import {useNavigate} from "react-router-dom"
 import { Appcontext } from '../context/Appcontext';
+import BaseComponent from 'bootstrap/js/dist/base-component';
+import BasicUsage from '../pages/Modalcart';
 
 const Navbar = () => {
   
@@ -161,8 +163,9 @@ const Navbar = () => {
                         <option >Blush</option>
                       </Select>
                  </Flex>
-                <Button onClick={()=>navigate("/cart")}
-                class={styles.navcartbutton}>{<GiShoppingBag fontSize="22px"/> } MY CART - ₹ {total}</Button>
+                 <BasicUsage/>
+                {/* <Button onClick={()=>navigate("/cart")}
+                class={styles.navcartbutton}>{<GiShoppingBag fontSize="22px"/> } <BasicUsage/> ₹ {total}</Button> */}
             </Flex>
          </div>
 

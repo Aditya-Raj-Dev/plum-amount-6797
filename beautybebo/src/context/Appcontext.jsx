@@ -33,7 +33,7 @@ export default function Appcontextprovider({children}){
    [name]:value,
 })
  }
-
+  
       function getdata(mpage){
          
         axios.get(` http://localhost:8080/makeup?_page=${mpage}&_limit=18`)
@@ -181,7 +181,7 @@ export default function Appcontextprovider({children}){
             setcart(res.data)
          })
       }
-    
+      const carttotal=cart.length
       //   function gettotal(){
       //    updatecart()
       //    const arr=[]
@@ -211,7 +211,7 @@ export default function Appcontextprovider({children}){
     return (
         <Appcontext.Provider value={{makeupdata,bestseller,latestproduct,
          fillsignupdata,logindata,setlogindata,changepage,load,mpage,spage,skin,changeskinpage,
-         onclickaddcart,cart,total,c,setc,
+         onclickaddcart,cart,total,c,setc,carttotal,
        mostviewed,prod,login,setlogin}}>
             {children}
         </Appcontext.Provider>

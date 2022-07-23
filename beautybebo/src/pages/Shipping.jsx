@@ -6,14 +6,16 @@ import { textAlign } from '@mui/system'
 import {FaFacebook} from 'react-icons/fa';
 import {FcGoogle} from 'react-icons/fc';
 import { Appcontext } from '../context/Appcontext'
+import {useNavigate} from "react-router-dom"
 
 const Shipping = () => {
+  const navigate=useNavigate()
   function fillsignupdata(){
 
   }
     
   return (
-    <div  className={styles.singbox} >
+    <div  className={styles.singbox}  >
       <h1 style={{fontSize:"18px", fontWeight:"bold",marginBottom:"0.5rem",marginTop:"0.5rem" ,textAlign:"center"}}>Shipping Address</h1>
       {/* <Flex margin="auto" width="40%" gap="1rem"justifyContent="center">
       <Button colorScheme='facebook' leftIcon={<FaFacebook />}>
@@ -24,7 +26,7 @@ const Shipping = () => {
       <br />
       <p style={{color:"grey"}}>--OR--</p> */}
       <br />
-      <div className={styles.container}>
+      <div className={styles.container} >
         <Flex gap="1rem" textAlign="left">
             <Grid>
               <label> First Name</label>
@@ -66,7 +68,7 @@ const Shipping = () => {
               <Input placeholder='Enter phone number' onChange={fillsignupdata}/>
             </Grid>
 
-            <Button onClick={()=>{}}>Proceed To Checkout</Button>
+            <Button onClick={()=>navigate('/checkout')}>Proceed To Checkout</Button>
       </div>
     </div>
   )

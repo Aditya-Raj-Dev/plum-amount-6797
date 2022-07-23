@@ -1,0 +1,53 @@
+.cartcontainer{
+    width:80%;
+margin:auto;
+display: grid;
+grid-template-columns: repeat(4,1fr);
+gap:3rem;
+
+
+}
+.cartbox{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius:10px ;
+    padding-bottom: 15px;
+    background-color: rgb(251, 251, 251);
+}
+.cartbox img{
+    height: 200px;
+    padding-left: 2rem;
+    background-color:aqua;
+    margin-bottom: 1rem;
+}
+.removebtn{
+    background-color: red;
+    color: white;
+    margin-top: 1rem;
+}
+.cartbox p{
+    font-weight: bold;
+    margin-bottom: 0.6rem;
+}
+.cartbox h5{
+    font-size:x-small;
+}
+.price{
+    margin-top: 5px;
+    padding: 3px;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    justify-content: space-around;
+}
+.addbtn{
+    margin-top: 1rem;
+    justify-content: center;
+}
+.addbtn button{
+    border-color: black;
+    height:30px;
+    width:30px;
+background-color: rgb(237, 245, 245)  ;
+    
+    
+}
