@@ -13,6 +13,7 @@ import Shipping from './pages/Shipping';
 import Checkout from './pages/Checkout';
 import Footer from './footer/Footer';
 import BasicUsage from "./pages/Modalcart"
+import CreditCard from './pages/Payment';
 
 function App() {
   return (
@@ -20,8 +21,6 @@ function App() {
       <Navbar/>
     <Allroutes/>
    <Footer/>
-  
-    
     </div>
   );
 }

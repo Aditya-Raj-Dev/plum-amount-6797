@@ -1046,38 +1046,31 @@
   ],
   "cart": [
     {
-      "id": "m1",
-      "name": "Miss Claire Eyelash Glue - Clear Tone",
-      "img": "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/2/7/277cf77missc00000081_1.jpg",
-      "price": 322,
-      "qty": 0
-    },
-    {
-      "id": "m2",
-      "name": "Maybelline New York Fit Me Primer - Dewy+Smooth",
-      "img": "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/5/b/5b990e16902395773146_3.jpg",
-      "price": 521,
-      "qty": 0
+      "id": "m15",
+      "name": "Faces Canada Peaches N Cream Tinted Moisturizer -",
+      "img": "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/5/4/54_2.jpg",
+      "price": 539,
+      "qty": 2
     },
     {
       "id": "m3",
       "name": "L'Oreal Paris Infallible Full Wear Concealer",
       "img": "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/6/9/6902395735908_0.jpg",
       "price": 735,
-      "qty": 0
-    },
-    {
-      "id": "s1",
-      "name": "Mamaearth Rice Face Scrub For Glowing Skin With Rice",
-      "img": "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/4/c/4ca14ce8906087779124_7_.jpg",
-      "price": 304,
-      "qty": 0
+      "qty": 1
     },
     {
       "id": "s2",
       "name": "Lotus Herbals Whiteglow Vitamin C Radiance Cream",
       "img": "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/i/m/image1_600x.jpg",
       "price": 428,
+      "qty": 1
+    },
+    {
+      "id": "s1",
+      "name": "Mamaearth Rice Face Scrub For Glowing Skin With Rice",
+      "img": "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/4/c/4ca14ce8906087779124_7_.jpg",
+      "price": 304,
       "qty": 1
     }
   ]

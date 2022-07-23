@@ -1,13 +1,45 @@
-import { Flex ,Grid,Box,Button} from '@chakra-ui/react'
-import React, { useContext } from 'react'
+import { Flex ,Grid,Box,Button,Input} from '@chakra-ui/react'
+import React, { useContext, useState } from 'react'
 import { Radio, RadioGroup } from '@chakra-ui/react'
 import { Appcontext } from '../context/Appcontext'
 import styles from "../styles/checkout.module.css"
+import { useNavigate } from 'react-router-dom'
+import {
+  Alert,
+  AlertIcon,
+  AlertTitle,
+  AlertDescription,
+} from '@chakra-ui/react'
 
 const Checkout = () => {
   const {total,carttotal}=useContext(Appcontext)
+  const navigate=useNavigate()
+  const [val,setval]=useState(null)
+  const [otp,setotp]=useState(false)
+
+  function final(){
+    if(val===3){
+      return navigate("/payment")
+    }
+    else if(val===2){
+      setotp(!otp)
+      setTimeout(()=>{
+        navigate("/order")
+      },3000)
+     
+    }
+    else{
+      navigate("/order")
+    }
+  }
   return (
     <div style={{width:"70%",margin:"auto",marginTop:"2rem"}}>
+      {
+        otp?<Alert status='success'>
+        <AlertIcon />
+        OTP Sent To your Mobile Number
+      </Alert>:null
+      }
       <Flex justifyContent="space-between" >
          <Grid>
                 <h1 style={{fontSize:"18px",fontWeight:"bold"}}>
@@ -16,16 +48,21 @@ const Checkout = () => {
                 <br />
                 <RadioGroup defaultValue='1'>
                   <Grid spacing={4} direction='row'>
-                  
-                    <Radio value='1' >Cash On Delivery</Radio>
+                    <Radio value='1'   onClick={()=>setval(1)}
+                     >Cash On Delivery</Radio>
                     <br />
                     <hr />
                     <br/>
-                    <Radio value='2'>Pay By UPI</Radio>
+                    <Radio value='2' onClick={()=>setval(2)}>Pay By UPI</Radio>
+                    <br />
+                    {
+                      val===2? <Input type="text" placeholder='Enter your UPI Number'/> :null
+                    }
                     <br />
                     <hr />
                     <br />
-                    <Radio value='3'>Debit/Credit Card/Net banking/Wallet - PayUmoney</Radio>
+                    <Radio value='3' onClick={()=>setval(3)}
+                    >Debit/Credit Card/Net banking/Wallet - PayUmoney</Radio>
                   </Grid>
                 </RadioGroup>
          </Grid>
@@ -74,8 +111,8 @@ const Checkout = () => {
   width='200px'
   border='2px'
   borderColor='black.500'
-
-      > Proceed To Pay</Button>
+     onClick={()=>final()}
+      > Place Order</Button>
     </div>
   )
 }

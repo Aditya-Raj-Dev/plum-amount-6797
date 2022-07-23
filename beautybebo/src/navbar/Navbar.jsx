@@ -21,6 +21,14 @@ import {useNavigate} from "react-router-dom"
 import { Appcontext } from '../context/Appcontext';
 import BaseComponent from 'bootstrap/js/dist/base-component';
 import BasicUsage from '../pages/Modalcart';
+const breakpoints = {
+  sm: '30em',
+  md: '48em',
+  lg: '62em',
+  xl: '80em',
+  '2xl': '96em',
+}
+
 
 const Navbar = () => {
   
@@ -29,7 +37,7 @@ const Navbar = () => {
  const [ftotal,setftotal]=useState(total)
 
   return (
-    <div>
+    <Box fontSize={['sm', 'md', 'lg', 'xl']} >
 
       <div name="navbarimg">
         <img src="https://www.beautybebo.com/pub/media/ads/ad-desktop.jpg" alt="beautybebo offer"  style={{width:"100%"}}/>
@@ -40,7 +48,7 @@ const Navbar = () => {
             <img src={beautlogo} alt="gfdvb" style={{height:"60%"}}/>
            </div>
 
-             <Flex marginTop="1.5rem">
+             <Flex marginTop="1.5rem" fontSize={['sm', 'md', 'lg', 'xl']} w={[300, 400, 500]}>
                 <div>
                   <Select width="13rem">
                     <option value="">All categories</option>
@@ -170,7 +178,7 @@ const Navbar = () => {
          </div>
 
      
-    </div>
+    </Box>
   )
 }
 

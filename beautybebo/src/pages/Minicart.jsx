@@ -24,9 +24,9 @@ const Minicart = () => {
     
    }
    
-   function removeitem(id){
-    console.log("jhkfd")
-    axios({
+    function removeitem(id){
+  
+  axios({
       url:` http://localhost:8080/cart/${id}`,
       method: 'DELETE',
     })
@@ -34,9 +34,14 @@ const Minicart = () => {
     setc(!c)
    }
 
-   function updateqty(num,id,name,img,price,qty){
-    
-    axios({
+  function updateqty(num,id,name,img,price,qty){
+    if(qty===1 && num=== -1){
+      console.log(qty)
+      console.log(num)
+      removeitem(id)
+      return
+     }
+   axios({
       url:` http://localhost:8080/cart/${id}`,
       method: 'PATCH',
       data:{

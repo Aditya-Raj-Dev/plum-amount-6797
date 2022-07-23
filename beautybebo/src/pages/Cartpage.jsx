@@ -7,6 +7,13 @@ import styles from "../styles/cart.module.css"
 import {Link } from "react-router-dom"
 import { GiButter } from 'react-icons/gi';
 import {useNavigate,useLocation } from "react-router-dom"
+const breakpoints = {
+  sm: '30em',
+  md: '48em',
+  lg: '62em',
+  xl: '80em',
+  '2xl': '96em',
+}
 
 const Cartpage = () => {
   const [remove,setremove]=useState(false)
@@ -24,8 +31,8 @@ const Cartpage = () => {
     
    }
    
-   function removeitem(id){
-    axios({
+   async function removeitem(id){
+   await axios({
       url:` http://localhost:8080/cart/${id}`,
       method: 'DELETE',
     })
@@ -33,14 +40,14 @@ const Cartpage = () => {
     setc(!c)
    }
 
-   function updateqty(num,id,name,img,price,qty){
-      //  if(qty===1 && num=== -1){
-      //   console.log(qty)
-      //   console.log(num)
-      //   removeitem(id)
-      //   return
-      //  }
-    axios({
+   async function updateqty(num,id,name,img,price,qty){
+       if(qty===1 && num=== -1){
+        console.log(qty)
+        console.log(num)
+        removeitem(id)
+        return
+       }
+   await axios({
       url:` http://localhost:8080/cart/${id}`,
       method: 'PATCH',
       data:{
@@ -78,7 +85,7 @@ const Cartpage = () => {
     <div className={styles.cartcontainer}>
 {
                cartp.map((item)=>(
-                    <div className={styles.cartbox}>
+                    <Box className={styles.cartbox} >
                         <img src={item.img}/>
                         <p>{item.name}</p>
                         <h5> ⭐⭐⭐⭐⭐</h5>
@@ -107,7 +114,7 @@ const Cartpage = () => {
                        onClick={()=>removeitem(item.id)}
                        >{<RiDeleteBinLine/>}REMOVE ITEM</Button>
                        
-                    </div>
+                    </Box>
                 ))
                }
     </div>
