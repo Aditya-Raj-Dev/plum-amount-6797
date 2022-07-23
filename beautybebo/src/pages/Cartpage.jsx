@@ -18,13 +18,13 @@ const Cartpage = () => {
    function getdata(){
     axios.get(` http://localhost:8080/cart`)
     .then((res)=>{
-       setcartp(res.data)
+     const data= res.data.filter((item)=>item.qty !== 0)
+       setcartp(data)
     })
     
    }
    
    function removeitem(id){
-    console.log("jhkfd")
     axios({
       url:` http://localhost:8080/cart/${id}`,
       method: 'DELETE',
@@ -34,18 +34,21 @@ const Cartpage = () => {
    }
 
    function updateqty(num,id,name,img,price,qty){
-    qty=Number(qty)
-    console.log(typeof(qty))
+      //  if(qty===1 && num=== -1){
+      //   console.log(qty)
+      //   console.log(num)
+      //   removeitem(id)
+      //   return
+      //  }
     axios({
       url:` http://localhost:8080/cart/${id}`,
-      method: 'PUT',
+      method: 'PATCH',
       data:{
               id:id,
                name:name,
                img:img,
                price:price,
-               qty:qty++,
-        
+               qty:qty+num,
       }
     }).then((res)=>{
       setc(!c)
@@ -90,13 +93,13 @@ const Cartpage = () => {
                        </div>
                        <Flex gap="0.5rem" className={styles.addbtn}>
                        <Button  variant='outline'
-                       onClick={()=>updateqty(-1,item.id,item.name,item.img,item.price)}
+                       onClick={()=>updateqty(-1,item.id,item.name,item.img,item.price,item.qty)}
                        >-</Button>
                        <Heading as='h5' size='sm' marginTop='0.6rem'>
                         {item.qty}
                         </Heading>
                        <Button  variant='outline'
-                       onClick={()=>updateqty(1,item.id,item.name,item.img,item.price)}
+                       onClick={()=>updateqty(1,item.id,item.name,item.img,item.price,item.qty)}
                        >+</Button>
                        </Flex>
                        <Button className={styles.removebtn}

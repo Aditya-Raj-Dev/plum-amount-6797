@@ -952,21 +952,21 @@
       "id": "bs1`",
       "name": "Ponds Super Light Gel ",
       "img": "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/p/o/ponds_super_light_gel_oil_free_moisturiser_with_hyaluronic_acid_vitamin_e2.jpg",
-      "cost": 299,
+      "price": 299,
       "off": "13% off"
     },
     {
       "id": "bs2`",
       "name": "Blue Heven Candy Mattle Lip Color",
       "img": "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/c/l/cl-08_strawberry_love-min_2.png",
-      "cost": 499,
+      "price": 499,
       "off": "13% off"
     },
     {
       "id": "bs3`",
       "name": "Ponds Pimple CLear Face Wash Pack Of 2",
       "img": "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/d/s/dsfsdafsdfsd.jpg",
-      "cost": 498,
+      "price": 498,
       "off": "13% off"
     }
   ],
@@ -975,21 +975,21 @@
       "id": "lp1",
       "name": "Mamaearth Rice Face Scrub For Glowing Skin",
       "img": "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/4/c/4ca14ce8906087779124_7_.jpg",
-      "cost": 304,
+      "price": 304,
       "off": "13% off"
     },
     {
       "id": "lp2`",
       "name": "Dove Intense Repair Shampoo 650ml",
       "img": "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/r/e/repair_shampoo_650-2_1_1.jpg",
-      "cost": 350,
+      "price": 350,
       "off": "13% off"
     },
     {
       "id": "lp3`",
       "name": "Organic Harvest Cleansing Milk With Essential Oils",
       "img": "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/8/9/8908003416557_1.png",
-      "cost": 491,
+      "price": 491,
       "off": "13% off"
     }
   ],
@@ -998,21 +998,21 @@
       "id": "mv1",
       "name": "O3+ Whitening Facial Kit With Brightness",
       "img": "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/o/5/o5_1_1.jpg",
-      "cost": 699,
+      "price": 699,
       "off": "2% off"
     },
     {
       "id": "mv2`",
       "name": "Ponds White Beauty Anti Spot Fairness Day Cream Spf 15 Pa++",
       "img": "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/x/z/xzxzxzxzxz.jpeg",
-      "cost": 240,
+      "price": 240,
       "off": "1% off"
     },
     {
       "id": "mv3`",
       "name": "Vaseline Body Lotion 400ml ",
       "img": "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/g/v/gvhjgvyjhv.jpg",
-      "cost": 310,
+      "price": 310,
       "off": "13% off"
     }
   ],
@@ -1021,8 +1021,7 @@
       "id": "s9",
       "name": "Biotique Advanced Organics Tea Tree Treament Oil Essential Oil For",
       "img": "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/7/b/7ba61598904352001284_1.jpg",
-      "price": 504,
-      "cost": 560,
+      "price": 560,
       "off": "10% off"
     },
     {
@@ -1041,31 +1040,44 @@
       "id": "s12",
       "name": "WOW Skin Science Raw African Shea Body Butter",
       "img": "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/3/e/3eb5e308904311902874_1.jpg",
-      "price": 440,
-      "cost": 499,
+      "price": 499,
       "off": "12% off"
     }
   ],
   "cart": [
     {
+      "id": "m1",
+      "name": "Miss Claire Eyelash Glue - Clear Tone",
+      "img": "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/2/7/277cf77missc00000081_1.jpg",
+      "price": 322,
+      "qty": 0
+    },
+    {
+      "id": "m2",
+      "name": "Maybelline New York Fit Me Primer - Dewy+Smooth",
+      "img": "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/5/b/5b990e16902395773146_3.jpg",
+      "price": 521,
+      "qty": 0
+    },
+    {
+      "id": "m3",
+      "name": "L'Oreal Paris Infallible Full Wear Concealer",
+      "img": "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/6/9/6902395735908_0.jpg",
+      "price": 735,
+      "qty": 0
+    },
+    {
+      "id": "s1",
+      "name": "Mamaearth Rice Face Scrub For Glowing Skin With Rice",
+      "img": "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/4/c/4ca14ce8906087779124_7_.jpg",
+      "price": 304,
+      "qty": 0
+    },
+    {
       "id": "s2",
       "name": "Lotus Herbals Whiteglow Vitamin C Radiance Cream",
       "img": "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/i/m/image1_600x.jpg",
       "price": 428,
-      "qty": 1
-    },
-    {
-      "id": "m21",
-      "name": "NYX Professional Makeup Pore Filler",
-      "img": "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/6/1/618a4rcg7il._sl1500_.jpg",
-      "price": 1378,
-      "qty": 1
-    },
-    {
-      "id": "s4",
-      "name": "WOW Skin Science Activated Charcoal Face Scrub",
-      "img": "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/8/9/8904304651284_1.jpg",
-      "price": 375,
       "qty": 1
     }
   ]

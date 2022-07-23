@@ -68,21 +68,19 @@ export default function Sliding() {
           delay: 2500,
           disableOnInteraction: false,
         }}
-        pagination={{
-          clickable: true,
-        }}
-        navigation={true}
+        
+        
         modules={[Autoplay, Pagination, Navigation]}
         className="mySwiper"
       >
         <SwiperSlide>
-          <img src="https://www.beautybebo.com/pub/media/mega-menu/slider-2.jpg" alt="" />
+          <img src="https://www.beautybebo.com/pub/media/mega-menu/slider-2.jpg" style={{height:"320px"}} />
         </SwiperSlide>
         <SwiperSlide>
-          <img src="https://www.beautybebo.com/pub/media/mega-menu/slider-3.jpg" alt="" />
+          <img src="https://www.beautybebo.com/pub/media/mega-menu/slider-3.jpg" alt=""style={{height:"320px"}} />
         </SwiperSlide>
         <SwiperSlide>
-          <img src="https://www.beautybebo.com/pub/media/mega-menu/slider-1.jpg" alt="" />
+          <img src="https://www.beautybebo.com/pub/media/mega-menu/slider-1.jpg" alt="" style={{height:"320px"}}/>
         </SwiperSlide>
         
       </Swiper>

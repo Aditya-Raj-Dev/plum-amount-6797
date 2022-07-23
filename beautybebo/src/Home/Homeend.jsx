@@ -96,7 +96,7 @@ const Homeend = () => {
                           <div >
                             <p>{item.name}</p>
                             <h5>⭐⭐⭐⭐⭐</h5>
-                            <h3>₹ {item.cost}</h3>
+                            <h3>₹ {item.price}</h3>
                             <Button  onClick={()=>onclickaddcart(item.id,item.name,item.img,item.price)}
                             >{<GiBeachBag/>} {  } Add to cart</Button>
                           </div>
@@ -115,7 +115,7 @@ const Homeend = () => {
                           <div >
                             <p>{item.name}</p>
                             <h5>⭐⭐⭐⭐⭐</h5>
-                            <h3>₹ {item.cost}</h3>
+                            <h3>₹ {item.price}</h3>
                             <Button  onClick={()=>onclickaddcart(item.id,item.name,item.img,item.price)}
                             >{<GiBeachBag/>} {  } Add to cart</Button>
                           </div>
@@ -134,7 +134,7 @@ const Homeend = () => {
                           <div >
                             <p>{item.name}</p>
                             <h5>⭐⭐⭐⭐⭐</h5>
-                            <h3>₹ {item.cost}</h3>
+                            <h3>₹ {item.price}</h3>
                             <Button  onClick={()=>onclickaddcart(item.id,item.name,item.img,item.price)}
                             >{<GiBeachBag/>} {  } Add to cart</Button>
                           </div>

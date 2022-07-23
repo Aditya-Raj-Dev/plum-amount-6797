@@ -9,7 +9,7 @@ const Allcateories = () => {
     const navigate=useNavigate()
   return (
     <div >
-        <Box >
+        <Box width="100%">
             <Flex gap="1rem" marginBottom="1rem">
             <AiOutlineBars fontSize="17px" fontWeight="bolder"/>
             <Heading as='h5' size='sm'>
@@ -18,7 +18,7 @@ const Allcateories = () => {
             </Flex>
 
          <Grid gap="1rem" className={styles.sidemenu}  >
-                <Flex gap="5rem" onClick={()=>navigate("/makeup")}>
+                <Flex gap="6.4rem" onClick={()=>navigate("/makeup")}>
                 <Flex gap="0.3rem">
                     <img src="https://www.beautybebo.com/pub/media/wysiwyg/menu-icons/makeup-small.png" alt="" />
                     <h1>Makeup</h1>
@@ -26,7 +26,7 @@ const Allcateories = () => {
                 <IoIosArrowForward/>
                 </Flex>
 
-                <Flex gap="6.3rem"  onClick={()=>navigate("/skin")}>
+                <Flex gap="7.7rem"  onClick={()=>navigate("/skin")}>
                     <Flex gap="0.3rem" >
                         <img src="https://www.beautybebo.com/pub/media/wysiwyg/menu-icons/skin-small.png" alt="" />
                         <h1>Skin</h1>
@@ -35,7 +35,7 @@ const Allcateories = () => {
                 </Flex>
             
 
-                <Flex gap="6.3rem">
+                <Flex gap="7.9rem">
                     <Flex gap="0.3rem">
                         <img src="https://www.beautybebo.com/pub/media/wysiwyg/menu-icons/hair-small.png" alt="" />
                         <h1>Hair</h1>
@@ -44,7 +44,7 @@ const Allcateories = () => {
                     <IoIosArrowForward/>
                 </Flex>
 
-                <Flex gap="3.2rem">
+                <Flex gap="4.5rem">
                     <Flex gap="0.3rem">
                         <img src="https://www.beautybebo.com/pub/media/wysiwyg/menu-icons/personal-care-small.png" alt="" />
                         <h1>Personal Care</h1>
@@ -52,7 +52,7 @@ const Allcateories = () => {
                     <IoIosArrowForward/>
                 </Flex>
 
-                <Flex gap="1.5rem">
+                <Flex gap="2.9rem">
                     <Flex gap="0.3rem">
                         <img src="https://www.beautybebo.com/pub/media/wysiwyg/menu-icons/mom-baby-care-small.png" alt="" />
                         <h1>Mom & baby Care</h1>
@@ -60,7 +60,7 @@ const Allcateories = () => {
                     <IoIosArrowForward/>
                 </Flex>
 
-                <Flex gap="4.4rem">
+                <Flex gap="6.6rem">
                     <Flex gap="0.3rem">
                         <img src="https://www.beautybebo.com/pub/media/fragrance.png" alt="" />
                         <h1>Fragrance</h1>
@@ -69,12 +69,14 @@ const Allcateories = () => {
                 </Flex>
 
                 
-                <Flex gap="7.7rem">
+                <Flex >
+                    <Flex gap="7rem" >
                     <Flex gap="0.3rem">
                         <img src="https://www.beautybebo.com/pub/media/ayurveda.png" alt="" />
                         <h1>Ayurveda</h1>
                     </Flex>
                     <IoIosArrowForward/>
+                    </Flex>
                 </Flex>
             </Grid>
         </Box>

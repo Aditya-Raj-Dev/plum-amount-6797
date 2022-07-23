@@ -111,7 +111,6 @@ export default function Appcontextprovider({children}){
 
 
       function onclickaddcart(id,name,img,price){
-       
          axios({
             url:`http://localhost:8080/cart`,
             method:"POST",
@@ -123,15 +122,6 @@ export default function Appcontextprovider({children}){
                qty:1,
             }
          })
-         // axios({
-         //          url:`http://localhost:8080/total`,
-         //          method:"POST",
-         //          data:{
-         //             id:Date.now(),
-         //             price:price,
-         //          }
-         //       })
-            
          setc(!c)
       }
 
@@ -173,7 +163,7 @@ export default function Appcontextprovider({children}){
          axios.get(`http://localhost:8080/cart`)
          .then((res)=>{
             const output=res.data.reduce((acc,curr)=>{
-               return acc+curr.price;
+               return acc+curr.price*curr.qty;
               // return acc
              },0)
              settotal(output)

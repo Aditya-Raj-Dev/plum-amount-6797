@@ -18,7 +18,8 @@ const Minicart = () => {
    function getdata(){
     axios.get(` http://localhost:8080/cart`)
     .then((res)=>{
-       setcartp(res.data)
+      const data= res.data.filter((item)=>item.qty !==0)
+       setcartp(data)
     })
     
    }
@@ -34,17 +35,16 @@ const Minicart = () => {
    }
 
    function updateqty(num,id,name,img,price,qty){
-    qty=Number(qty)
-    console.log(typeof(qty))
+    
     axios({
       url:` http://localhost:8080/cart/${id}`,
-      method: 'PUT',
+      method: 'PATCH',
       data:{
               id:id,
                name:name,
                img:img,
                price:price,
-               qty:qty++,
+               qty:qty+num,
         
       }
     }).then((res)=>{
@@ -62,7 +62,7 @@ const Minicart = () => {
 {
                cartp.map((item)=>(
                     <div className={styles.box} >
-                      <Flex>
+                      <Flex  textAlign="left">
                         <img src={item.img}/>
                         <Grid>
                           <p>{item.name}</p>
@@ -79,14 +79,14 @@ const Minicart = () => {
                         <Flex gap="0.5rem" className={styles.addbtn}>
                         <Button  variant='outline'fontSize="12px" height="20px"
                         colorScheme="red"  width="20px"
-                        onClick={()=>updateqty(-1,item.id,item.name,item.img,item.price)}
+                        onClick={()=>updateqty(-1,item.id,item.name,item.img,item.price,item.qty)}
                         >-</Button>
                         <Heading as='h5' size='sm'>
                           {item.qty}
                           </Heading>
                         <Button colorScheme="red" 
                         variant='outline'fontSize="12px" height="20px" width="20px"
-                        onClick={()=>updateqty(1,item.id,item.name,item.img,item.price)}
+                        onClick={()=>updateqty(1,item.id,item.name,item.img,item.price,item.qty)}
                         >+</Button>
                         </Flex>
                         <Button className={styles.removebtn} 

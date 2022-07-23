@@ -94,7 +94,7 @@ function submitsignupform(){
             </Grid>
             <Grid>
               <label>Confirm Password</label>
-              <Input placeholder='Confirm your password'/>
+              <Input type="password" placeholder='Confirm your password'/>
             </Grid>
 
             <Button onClick={submitsignupform}>CREATE AN ACCOUNT</Button>

@@ -20,7 +20,7 @@ function App() {
       <Navbar/>
     <Allroutes/>
    <Footer/>
-   <BasicUsage/>
+  
     
     </div>
   );

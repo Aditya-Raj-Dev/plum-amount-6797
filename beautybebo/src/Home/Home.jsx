@@ -12,7 +12,7 @@ const Home = () => {
     <div >
         
         <div className={styles.container}>
-        <Flex justifyContent="space-around" marginTop="1.5rem" marginBottom="2.5rem">
+        <Flex gap="4rem" justifyContent="space-around" marginTop="1.5rem" >
           <Allcateories/>
           <Sliding/> 
         </Flex>
