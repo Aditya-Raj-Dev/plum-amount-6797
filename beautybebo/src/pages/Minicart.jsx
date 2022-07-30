@@ -16,7 +16,7 @@ const Minicart = () => {
     
 
    function getdata(){
-    axios.get(` http://localhost:8080/cart`)
+    axios.get(`https://beautybeboplumamount.herokuapp.com/cart`)
     .then((res)=>{
       const data= res.data.filter((item)=>item.qty !==0)
        setcartp(data)
@@ -27,7 +27,7 @@ const Minicart = () => {
     function removeitem(id){
   
   axios({
-      url:` http://localhost:8080/cart/${id}`,
+      url:`https://beautybeboplumamount.herokuapp.com/cart/${id}`,
       method: 'DELETE',
     })
     setremove(!remove)
@@ -42,7 +42,7 @@ const Minicart = () => {
       return
      }
    axios({
-      url:` http://localhost:8080/cart/${id}`,
+      url:`https://beautybeboplumamount.herokuapp.com/cart/${id}`,
       method: 'PATCH',
       data:{
               id:id,
@@ -95,7 +95,7 @@ const Minicart = () => {
                         >+</Button>
                         </Flex>
                         <Button className={styles.removebtn} 
-                        colorScheme="black" fontSize="12px" height="20px" width="90px"
+                        colorScheme="yellow" fontSize="12px" height="20px" width="90px"
                         onClick={()=>removeitem(item.id)}
                         >{<RiDeleteBinLine/>}REMOVE ITEM</Button>
                        </Grid>

@@ -1046,31 +1046,24 @@
   ],
   "cart": [
     {
-      "id": "m15",
-      "name": "Faces Canada Peaches N Cream Tinted Moisturizer -",
-      "img": "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/5/4/54_2.jpg",
-      "price": 539,
+      "id": "s3",
+      "name": "WOW Skin Science Caffeine Face Serum",
+      "img": "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/3/6/3699c478906105612174-2.jpg",
+      "price": 515,
+      "qty": 1
+    },
+    {
+      "id": "s5",
+      "name": "WOW Skin Science Activated Charcoal Face Mask",
+      "img": "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/a/c/activated_charcoal_face_mask2.jpg",
+      "price": 435,
       "qty": 2
     },
     {
-      "id": "m3",
-      "name": "L'Oreal Paris Infallible Full Wear Concealer",
-      "img": "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/6/9/6902395735908_0.jpg",
-      "price": 735,
-      "qty": 1
-    },
-    {
-      "id": "s2",
-      "name": "Lotus Herbals Whiteglow Vitamin C Radiance Cream",
-      "img": "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/i/m/image1_600x.jpg",
-      "price": 428,
-      "qty": 1
-    },
-    {
-      "id": "s1",
-      "name": "Mamaearth Rice Face Scrub For Glowing Skin With Rice",
-      "img": "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/4/c/4ca14ce8906087779124_7_.jpg",
-      "price": 304,
+      "id": "s6",
+      "name": "Lotus Organics+ Bakuchiol Plant Retinol Miracle Facial Oil",
+      "img": "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/f/0/f0c4f25lotus00000014.jpg",
+      "price": 896,
       "qty": 1
     }
   ]

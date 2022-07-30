@@ -23,7 +23,7 @@ const Cartpage = () => {
     
 
    function getdata(){
-    axios.get(` http://localhost:8080/cart`)
+    axios.get(`https://beautybeboplumamount.herokuapp.com/cart`)
     .then((res)=>{
      const data= res.data.filter((item)=>item.qty !== 0)
        setcartp(data)
@@ -33,7 +33,7 @@ const Cartpage = () => {
    
    async function removeitem(id){
    await axios({
-      url:` http://localhost:8080/cart/${id}`,
+      url:`https://beautybeboplumamount.herokuapp.com/cart/${id}`,
       method: 'DELETE',
     })
     setremove(!remove)
@@ -48,7 +48,7 @@ const Cartpage = () => {
         return
        }
    await axios({
-      url:` http://localhost:8080/cart/${id}`,
+      url:`https://beautybeboplumamount.herokuapp.com/cart/${id}`,
       method: 'PATCH',
       data:{
               id:id,

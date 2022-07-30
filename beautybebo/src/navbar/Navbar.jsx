@@ -89,8 +89,21 @@ const Navbar = () => {
               </div>
       </MenuButton>
       <MenuList>
-        <MenuItem onClick={()=>navigate("/login")}>Login</MenuItem>
-        <MenuItem onClick={()=>navigate("/signup")}>Signup</MenuItem>
+        <MenuItem onClick={()=>{{
+          if(login===true){
+            alert("You are already logged in")
+          }
+          else{
+            navigate("/login")
+          }
+          }}}>Login</MenuItem>
+        <MenuItem onClick={()=>{
+          if(login===true){
+            alert("You are already logged in")
+          }else{
+            navigate("/signup")
+          }
+          }}>Signup</MenuItem>
       </MenuList>
     </>
   )}

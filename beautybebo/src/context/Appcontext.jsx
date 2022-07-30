@@ -36,7 +36,7 @@ export default function Appcontextprovider({children}){
   
       function getdata(mpage){
          
-        axios.get(` http://localhost:8080/makeup?_page=${mpage}&_limit=18`)
+        axios.get(`https://beautybeboplumamount.herokuapp.com/makeup?_page=${mpage}&_limit=18`)
         .then((res)=>{
          
            setMakeupdata(res.data)
@@ -44,7 +44,7 @@ export default function Appcontextprovider({children}){
          console.log(err)
         })
 
-        axios.get(`http://localhost:8080/bestseller`)
+        axios.get(`https://beautybeboplumamount.herokuapp.com/bestseller`)
         .then((res)=>{
          
            setBestseller(res.data)
@@ -52,7 +52,7 @@ export default function Appcontextprovider({children}){
          console.log(err)
         })
 
-        axios.get(` http://localhost:8080/latestproduct`)
+        axios.get(`https://beautybeboplumamount.herokuapp.com/latestproduct`)
         .then((res)=>{
          
            setlatestproduct(res.data)
@@ -60,7 +60,7 @@ export default function Appcontextprovider({children}){
          console.log(err)
         })
 
-        axios.get(` http://localhost:8080/mostviewed`)
+        axios.get(`https://beautybeboplumamount.herokuapp.com/mostviewed`)
         .then((res)=>{
          
            setmostviewed(res.data)
@@ -68,7 +68,7 @@ export default function Appcontextprovider({children}){
          console.log(err)
         })
 
-        axios.get(` http://localhost:8080/prod`)
+        axios.get(`https://beautybeboplumamount.herokuapp.com/prod`)
         .then((res)=>{
        
            setprod(res.data)
@@ -80,7 +80,7 @@ export default function Appcontextprovider({children}){
       }
 
       function getskindata(spage){
-         axios.get(` http://localhost:8080/skin?_page=${spage}&_limit=18`)
+         axios.get(`https://beautybeboplumamount.herokuapp.com/skin?_page=${spage}&_limit=18`)
          .then((res)=>{
             setskin(res.data)
          }).catch((err)=>{
@@ -112,7 +112,7 @@ export default function Appcontextprovider({children}){
 
       function onclickaddcart(id,name,img,price){
          axios({
-            url:`http://localhost:8080/cart`,
+            url:`https://beautybeboplumamount.herokuapp.com/cart`,
             method:"POST",
             data:{
                id:id,
@@ -127,7 +127,7 @@ export default function Appcontextprovider({children}){
 
       // function addintotal(p){
       //    axios({
-      //       url:`http://localhost:8080/total`,
+      //       url:`http://:/total`,
       //       method:"POST",
       //       data:{
       //          id:Date.now(),
@@ -149,7 +149,7 @@ export default function Appcontextprovider({children}){
       // function calculatetotal(){
       //   cart.map((item)=>(
       //    axios({
-      //          url:`http://localhost:8080/total`,
+      //          url:`http://:/total`,
       //          method:"POST",
       //          data:{
       //            id:Date.now(),
@@ -160,7 +160,7 @@ export default function Appcontextprovider({children}){
 
       // }
       function updatecart(){
-         axios.get(`http://localhost:8080/cart`)
+         axios.get(`https://beautybeboplumamount.herokuapp.com/cart`)
          .then((res)=>{
             const output=res.data.reduce((acc,curr)=>{
                return acc+curr.price*curr.qty;

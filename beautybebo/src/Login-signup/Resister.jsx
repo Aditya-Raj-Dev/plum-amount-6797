@@ -22,15 +22,12 @@ const Resister = () => {
   const {fillsignupdata,logindata,setlogindata,login,setlogin}=useContext(Appcontext)
 
 function submitsignupform(){
-  console.log("submitsignupform called")
- if(logindata.fname==="" || logindata.lname==="" || logindata.email==="" || logindata.phone===""
-  || logindata.pass===""
+ if(logindata.fname==="" 
  ){
   alert("Please Fill The form")
  }
  else{
   if(state.from){
-  
     setlogin(true)
     navigate(state.from,{replace:true})
   }
